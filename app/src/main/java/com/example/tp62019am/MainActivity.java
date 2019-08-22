@@ -119,10 +119,11 @@ public class MainActivity extends AppCompatActivity {
     public void ButtonElegir(View vista) {
         Intent intent;
         intent = new Intent(Intent.ACTION_GET_CONTENT);
-
+        Log.d("Foto", "entro");
         intent.setType("image/*");
-
+        Log.d("Foto", "se eligio la foto");
         startActivityForResult(Intent.createChooser(intent, "Seleccione Foto"), codigoLlamada);
+        Log.d("Foto", ""+ codigoLlamada);
     }
 
     @Override
